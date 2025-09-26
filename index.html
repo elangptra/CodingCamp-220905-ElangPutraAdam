@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-gray-800">
+    <div class="relative img-bg min-h-screen">
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+      <!-- Navbar -->
+      <header
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-4 bg-black/40 backdrop-blur-sm shadow-md"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <div
+            class="w-10 h-10 rounded-full border flex items-center justify-center bg-white"
+          >
+            <div class="icon"></div>
+          </div>
+          <span class="text-white font-semibold"></span>
+        </div>
+
+        <!-- Nav Links -->
+        <nav class="flex space-x-6">
+          <a href="#home" class="text-white font-medium hover:text-gray-200"
+            >Home</a
+          >
+          <a href="#profile" class="text-white font-medium hover:text-gray-200"
+            >Our Profile</a
+          >
+          <a
+            href="#characters"
+            class="text-white font-medium hover:text-gray-200"
+            >Characters</a
+          >
+          <a href="#message" class="text-white font-medium hover:text-gray-200"
+            >Message Us</a
+          >
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section
+        class="relative z-10 flex flex-col items-center justify-center text-center text-white min-h-screen px-4"
+        id="home"
+      >
+        <h1 class="text-4xl font-bold drop-shadow-lg">
+          Hi Elang, Welcome To My Persona Fansite
+        </h1>
+        <p class="text-lg mt-2 drop-shadow">
+          Ini adalah website latihan yang dibuat oleh Elang
+        </p>
+      </section>
+    </div>
+
+    <!-- Our Profile -->
+    <section
+      class="py-16 bg-gradient-to-b from-gray-100 to-gray-200 text-center"
+      id="profile"
+    >
+      <div class="container mx-auto px-6 flex flex-col items-center space-y-8">
+        <!-- Judul -->
+        <h2 class="text-3xl font-bold text-[#1269cc]">Our Profile</h2>
+
+        <!-- Konten -->
+        <div class="max-w-3xl space-y-4 text-justify">
+          <p class="leading-relaxed">
+            <span class="font-semibold">Persona 3 Reload</span> is a 2024
+            role-playing video game developed by Atlus. It is a remake of
+            <span class="italic">Persona 3</span>, the fourth entry in the main
+            Persona series, which is also part of the larger
+            <span class="italic">Megami Tensei</span> franchise.
+          </p>
+          <p class="leading-relaxed">
+            Reload brings modern visuals, new mechanics, and improved
+            quality-of-life features while still preserving the original story
+            and the classic atmosphere that made it so memorable.
+          </p>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Remake with updated graphics and animations</li>
+            <li>Improved quality-of-life (QoL) features</li>
+            <li>Refreshed yet iconic storyline</li>
+            <li>
+              Part of the <span class="italic">Megami Tensei</span> series
+            </li>
+          </ul>
+        </div>
+
+        <!-- Gambar -->
+        <img
+          src="assets/ss_dlc_017f9d80702e1e259055495112f6d98b.webp"
+          alt="Persona 3 Reload"
+          class="rounded-lg shadow-lg max-w-2xl mx-auto"
+        />
+      </div>
+    </section>
+
+    <!-- About -->
+<section class="py-16 bg-gray-100" id="about">
+  <div class="max-w-6xl mx-auto space-y-12 px-6">
+    <!-- Introduction -->
+    <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl shadow-lg">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">Introduction</h1>
+        <p>
+          Life doesn't always go as planned, and you—as the protagonist—transfer
+          into Gekkoukan High School, located at the center of the man-made
+          Tatsumi Port Island only for a terrifying creature to attack your dorm.
+        </p>
+        <p>
+          In the midst of chaos, you awaken to your Persona—a powerful force that
+          can be used to fight back.
+        </p>
+        <p>
+          A group of others who share this power recruit you into their
+          Specialized Extracurricular Execution Squad (S.E.E.S.), and so begins
+          your journey to uncover the mysteries behind these incidents...
+        </p>
+      </div>
+      <img
+        src="assets/introduction.jpg"
+        alt="introduction"
+        class="w-full max-w-md rounded-xl shadow-md"
+      />
+    </div>
+
+    <!-- Feature -->
+    <div class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-2xl shadow-lg">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">Feature</h1>
+        <p>
+          The new and improved version of Persona 3 preserves the story and
+          characters fans know and love while introducing new quality-of-life
+          mechanics and a complete graphical overhaul.
+        </p>
+        <p>
+          Experience what made this game leave such an impact, now better than ever.
+        </p>
+      </div>
+      <img
+        src="assets/school feature.jpg"
+        alt="feature"
+        class="w-full max-w-md rounded-xl shadow-md"
+      />
+    </div>
+
+    <!-- System -->
+    <div class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl shadow-lg">
+      <div class="flex-1 space-y-4">
+        <h1 class="text-3xl font-bold text-blue-600">System</h1>
+        <p>
+          The Persona 3 experience becomes even more enjoyable while retaining its
+          originality.
+        </p>
+        <p>
+          A more exhilarating battle system and new graphics and gimmicks make
+          Tartarus easier to explore. Dormitory life and community have also
+          legitimately evolved!
+        </p>
+      </div>
+      <img
+        src="assets/battle.jpg"
+        alt="system"
+        class="w-full max-w-md rounded-xl shadow-md"
+      />
+    </div>
+  </div>
+</section>
+
+
+    <!-- Main Characters -->
+    <section class="py-16 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200" id="characters">
+      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+        Characters
+      </h2>
+
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto px-6"
+      >
+        <!-- Makoto Yuki -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-blue-200 group-hover:ring-blue-400 transition"
+          >
+            <img
+              src="assets/makoto yuki.jpg"
+              alt="Makoto Yuki"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Makoto Yuki
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            The quiet protagonist and leader of SEES.
+          </p>
+        </div>
+
+        <!-- Aigis -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-yellow-200 group-hover:ring-yellow-400 transition"
+          >
+            <img
+              src="assets/aigis.jpg"
+              alt="Aigis"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Aigis
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            An android with a soul, devoted to protecting the protagonist.
+          </p>
+        </div>
+
+        <!-- Yukari Takeba -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-pink-200 group-hover:ring-pink-400 transition"
+          >
+            <img
+              src="assets/yukari takeba.jpg"
+              alt="Yukari Takeba"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Yukari Takeba
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            A cheerful yet determined girl who fights with her bow.
+          </p>
+        </div>
+
+        <!-- Mitsuru Kirijo -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-red-200 group-hover:ring-red-400 transition"
+          >
+            <img
+              src="assets/mitsuri kirijo.jpg"
+              alt="Mitsuru Kirijo"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Mitsuru Kirijo
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            The intelligent and composed student council president.
+          </p>
+        </div>
+
+        <!-- Junpei Iori -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-green-200 group-hover:ring-green-400 transition"
+          >
+            <img
+              src="assets/junpei iori.jpg"
+              alt="Junpei Iori"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Junpei Iori
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            Easygoing and comic relief, but brave when it matters.
+          </p>
+        </div>
+
+        <!-- Akihiko Sanada -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-gray-300 group-hover:ring-gray-500 transition"
+          >
+            <img
+              src="assets/akihiko sanada.jpg"
+              alt="Akihiko Sanada"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Akihiko Sanada
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            A dedicated boxer and loyal member of SEES.
+          </p>
+        </div>
+
+        <!-- Fuuka Yamagishi -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-teal-200 group-hover:ring-teal-400 transition"
+          >
+            <img
+              src="assets/fuuka yamagishi.jpg"
+              alt="Fuuka Yamagishi"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Fuuka Yamagishi
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            A shy but gifted support specialist with healing powers.
+          </p>
+        </div>
+
+        <!-- Ken Amada -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-indigo-200 group-hover:ring-indigo-400 transition"
+          >
+            <img
+              src="assets/ken amada.jpg"
+              alt="Ken Amada"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Ken Amada
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            A young boy with remarkable resolve far beyond his age.
+          </p>
+        </div>
+
+        <!-- Koromaru -->
+        <div
+          class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
+        >
+          <div
+            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-purple-200 group-hover:ring-purple-400 transition"
+          >
+            <img
+              src="assets/Koromaru.jpg"
+              alt="Koromaru"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+            Koromaru
+          </h3>
+          <p class="mt-2 text-sm text-gray-500 text-center">
+            A loyal dog who can summon a Persona and fights for SEES.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message Us -->
+    <section class="py-12 px-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white" id="message">
+      <h2 class="text-3xl font-bold mb-8 text-center">Message Us</h2>
+      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <!-- Form -->
+        <form class="space-y-5 bg-gray-800 p-6 rounded-2xl shadow-lg">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nama</label>
+            <input
+              type="text"
+              class="w-full border border-gray-600 px-3 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Masukkan nama Anda"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Tanggal Lahir</label>
+            <input
+              type="date"
+              class="w-full border border-gray-600 px-3 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 outline-none"
+            />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Jenis Kelamin</label>
+            <div class="flex items-center gap-6">
+              <label class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Laki-laki"
+                  class="text-blue-500"
+                />
+                <span>Laki-laki</span>
+              </label>
+              <label class="flex items-center gap-2">
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Perempuan"
+                  class="text-blue-500"
+                />
+                <span>Perempuan</span>
+              </label>
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Pesan</label>
+            <textarea
+              rows="4"
+              class="w-full border border-gray-600 px-3 py-2 rounded-lg bg-gray-700 text-white focus:ring-2 focus:ring-blue-500 outline-none"
+              placeholder="Tulis pesan Anda..."
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full py-2 rounded-lg bg-blue-600 hover:bg-blue-700 font-semibold transition"
+          >
+            Submit
+          </button>
+        </form>
+
+        <!-- Output -->
+        <div class="bg-gray-800 p-6 rounded-2xl shadow-lg space-y-3 text-sm">
+          <p>
+            <span class="font-semibold">Current time :</span> Fri Jun 17 2022
+            11:27:25 GMT+0100
+          </p>
+          <p><span class="font-semibold">Nama :</span> Elang  Welco</p>
+          <p><span class="font-semibold">Tanggal Lahir :</span> 01/01/1995</p>
+          <p><span class="font-semibold">Jenis Kelamin :</span> Laki-laki</p>
+          <p>
+            <span class="font-semibold">Pesan :</span> Lagi Belajar buat Website
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="bg-gray-900 text-center py-4 text-sm text-gray-400 border-t border-gray-700"
+    >
+      Created By <span class="text-white font-semibold">Elang Putra Adam</span>
+    </footer>
+  </body>
+</html>

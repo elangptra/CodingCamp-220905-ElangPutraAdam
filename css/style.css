@@ -1,0 +1,26 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* cegah scroll horizontal */
+}
+
+.icon {
+  -webkit-mask: url(../assets/persona_3_reload_logo__main_character__by_firzecrescent_dgsn1ya.svg)
+    no-repeat center;
+  -webkit-mask-size: contain;
+  mask: url(../assets/persona_3_reload_logo__main_character__by_firzecrescent_dgsn1ya.svg)
+    no-repeat center;
+  mask-size: contain;
+  background-color: #1269cc; /* warna isi */
+  width: 50px;
+  height: 50px;
+}
+
+.img-bg {
+  background-image: url(../assets/5i4896ieyvmc1-1600x900.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+}
