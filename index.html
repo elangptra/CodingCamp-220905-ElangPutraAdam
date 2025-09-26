@@ -6,6 +6,12 @@
     <title>My Website</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Toggle mobile menu
+      function toggleMenu() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      }
+    </script>
   </head>
   <body class="font-sans text-gray-800">
     <div class="relative img-bg min-h-screen">
@@ -14,7 +20,7 @@
 
       <!-- Navbar -->
       <header
-        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-10 py-4 bg-black/40 backdrop-blur-sm shadow-md"
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 sm:px-6 md:px-10 py-4 bg-black/40 backdrop-blur-sm shadow-md"
       >
         <!-- Logo -->
         <div class="flex items-center space-x-2">
@@ -23,11 +29,11 @@
           >
             <div class="icon"></div>
           </div>
-          <span class="text-white font-semibold"></span>
+          <span class="text-white font-semibold">Persona</span>
         </div>
 
-        <!-- Nav Links -->
-        <nav class="flex space-x-6">
+        <!-- Nav Links (Desktop) -->
+        <nav class="hidden md:flex space-x-6">
           <a
             href="#home"
             class="text-white font-medium hover:text-gray-200 transition transform active:scale-95 duration-200"
@@ -49,17 +55,54 @@
             >Message Us</a
           >
         </nav>
+
+        <!-- Hamburger Button -->
+        <button
+          class="md:hidden text-white focus:outline-none"
+          onclick="toggleMenu()"
+        >
+          <svg
+            class="w-7 h-7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
       </header>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed top-16 right-4 bg-black/80 backdrop-blur-md rounded-lg shadow-lg p-4 space-y-3 z-50 md:hidden"
+      >
+        <a href="#home" class="block text-white hover:text-gray-200">Home</a>
+        <a href="#profile" class="block text-white hover:text-gray-200"
+          >Our Profile</a
+        >
+        <a href="#characters" class="block text-white hover:text-gray-200"
+          >Characters</a
+        >
+        <a href="#message" class="block text-white hover:text-gray-200"
+          >Message Us</a
+        >
+      </div>
 
       <!-- Hero Section -->
       <section
         class="relative z-10 flex flex-col items-center justify-center text-center text-white min-h-screen px-4"
         id="home"
       >
-        <h1 class="text-4xl font-bold drop-shadow-lg">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold drop-shadow-lg">
           Hi Elang, Welcome To My Persona Fansite
         </h1>
-        <p class="text-lg mt-2 drop-shadow">
+        <p class="text-base sm:text-lg mt-2 drop-shadow">
           Ini adalah website latihan yang dibuat oleh Elang
         </p>
       </section>
@@ -70,7 +113,9 @@
       class="py-16 bg-gradient-to-b from-gray-100 to-gray-200 text-center"
       id="profile"
     >
-      <div class="container mx-auto px-6 flex flex-col items-center space-y-8">
+      <div
+        class="container mx-auto px-4 sm:px-6 flex flex-col items-center space-y-8"
+      >
         <!-- Judul -->
         <h2 class="text-3xl font-bold text-[#1269cc]">Our Profile</h2>
 
@@ -102,36 +147,31 @@
         <img
           src="assets/ss_dlc_017f9d80702e1e259055495112f6d98b.webp"
           alt="Persona 3 Reload"
-          class="rounded-lg shadow-lg max-w-2xl mx-auto"
+          class="rounded-lg shadow-lg w-full max-w-2xl mx-auto"
         />
       </div>
     </section>
 
     <!-- About -->
     <section class="py-16 bg-gray-100" id="about">
-      <div class="max-w-6xl mx-auto space-y-12 px-6">
+      <div class="max-w-6xl mx-auto space-y-12 px-4 sm:px-6">
         <!-- Introduction -->
         <div
           class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl shadow-lg"
         >
           <div class="flex-1 space-y-4">
-            <h1 class="text-3xl font-bold text-blue-600">Introduction</h1>
+            <h1 class="text-2xl sm:text-3xl font-bold text-blue-600">
+              Introduction
+            </h1>
             <p>
               Life doesn't always go as planned, and you—as the
-              protagonist—transfer into Gekkoukan High School, located at the
-              center of the man-made Tatsumi Port Island only for a terrifying
-              creature to attack your dorm.
+              protagonist—transfer into Gekkoukan High School...
             </p>
             <p>
               In the midst of chaos, you awaken to your Persona—a powerful force
               that can be used to fight back.
             </p>
-            <p>
-              A group of others who share this power recruit you into their
-              Specialized Extracurricular Execution Squad (S.E.E.S.), and so
-              begins your journey to uncover the mysteries behind these
-              incidents...
-            </p>
+            <p>A group of others who share this power recruit you...</p>
           </div>
           <img
             src="assets/introduction.jpg"
@@ -145,11 +185,12 @@
           class="flex flex-col md:flex-row-reverse items-center gap-8 bg-white p-6 rounded-2xl shadow-lg"
         >
           <div class="flex-1 space-y-4">
-            <h1 class="text-3xl font-bold text-blue-600">Feature</h1>
+            <h1 class="text-2xl sm:text-3xl font-bold text-blue-600">
+              Feature
+            </h1>
             <p>
               The new and improved version of Persona 3 preserves the story and
-              characters fans know and love while introducing new
-              quality-of-life mechanics and a complete graphical overhaul.
+              characters fans know and love while introducing new QoL...
             </p>
             <p>
               Experience what made this game leave such an impact, now better
@@ -168,16 +209,12 @@
           class="flex flex-col md:flex-row items-center gap-8 bg-white p-6 rounded-2xl shadow-lg"
         >
           <div class="flex-1 space-y-4">
-            <h1 class="text-3xl font-bold text-blue-600">System</h1>
+            <h1 class="text-2xl sm:text-3xl font-bold text-blue-600">System</h1>
             <p>
               The Persona 3 experience becomes even more enjoyable while
               retaining its originality.
             </p>
-            <p>
-              A more exhilarating battle system and new graphics and gimmicks
-              make Tartarus easier to explore. Dormitory life and community have
-              also legitimately evolved!
-            </p>
+            <p>A more exhilarating battle system and new graphics...</p>
           </div>
           <img
             src="assets/battle.jpg"
@@ -193,19 +230,21 @@
       class="py-16 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200"
       id="characters"
     >
-      <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center mb-10 text-gray-800"
+      >
         Characters
       </h2>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-5xl mx-auto px-6"
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
       >
         <!-- Makoto Yuki -->
         <div
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-blue-200 group-hover:ring-blue-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-blue-200 group-hover:ring-blue-400 transition"
           >
             <img
               src="assets/makoto yuki.jpg"
@@ -213,10 +252,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Makoto Yuki
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             The quiet protagonist and leader of SEES.
           </p>
         </div>
@@ -226,7 +267,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-yellow-200 group-hover:ring-yellow-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-yellow-200 group-hover:ring-yellow-400 transition"
           >
             <img
               src="assets/aigis.jpg"
@@ -234,10 +275,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Aigis
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             An android with a soul, devoted to protecting the protagonist.
           </p>
         </div>
@@ -247,7 +290,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-pink-200 group-hover:ring-pink-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-pink-200 group-hover:ring-pink-400 transition"
           >
             <img
               src="assets/yukari takeba.jpg"
@@ -255,10 +298,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Yukari Takeba
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             A cheerful yet determined girl who fights with her bow.
           </p>
         </div>
@@ -268,7 +313,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-red-200 group-hover:ring-red-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-red-200 group-hover:ring-red-400 transition"
           >
             <img
               src="assets/mitsuri kirijo.jpg"
@@ -276,10 +321,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Mitsuru Kirijo
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             The intelligent and composed student council president.
           </p>
         </div>
@@ -289,7 +336,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-green-200 group-hover:ring-green-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-green-200 group-hover:ring-green-400 transition"
           >
             <img
               src="assets/junpei iori.jpg"
@@ -297,10 +344,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Junpei Iori
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             Easygoing and comic relief, but brave when it matters.
           </p>
         </div>
@@ -310,7 +359,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-gray-300 group-hover:ring-gray-500 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-gray-300 group-hover:ring-gray-500 transition"
           >
             <img
               src="assets/akihiko sanada.jpg"
@@ -318,10 +367,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Akihiko Sanada
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             A dedicated boxer and loyal member of SEES.
           </p>
         </div>
@@ -331,7 +382,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-teal-200 group-hover:ring-teal-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-teal-200 group-hover:ring-teal-400 transition"
           >
             <img
               src="assets/fuuka yamagishi.jpg"
@@ -339,10 +390,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Fuuka Yamagishi
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             A shy but gifted support specialist with healing powers.
           </p>
         </div>
@@ -352,7 +405,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-indigo-200 group-hover:ring-indigo-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-indigo-200 group-hover:ring-indigo-400 transition"
           >
             <img
               src="assets/ken amada.jpg"
@@ -360,10 +413,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Ken Amada
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             A young boy with remarkable resolve far beyond his age.
           </p>
         </div>
@@ -373,7 +428,7 @@
           class="group bg-white rounded-2xl shadow-md p-6 hover:shadow-lg transition duration-300 transform hover:-translate-y-1"
         >
           <div
-            class="w-32 h-32 mx-auto rounded-full overflow-hidden ring-4 ring-purple-200 group-hover:ring-purple-400 transition"
+            class="w-28 h-28 sm:w-32 sm:h-32 mx-auto rounded-full overflow-hidden ring-4 ring-purple-200 group-hover:ring-purple-400 transition"
           >
             <img
               src="assets/Koromaru.jpg"
@@ -381,10 +436,12 @@
               class="object-cover w-full h-full"
             />
           </div>
-          <h3 class="mt-6 text-xl font-semibold text-gray-800 text-center">
+          <h3
+            class="mt-6 text-lg md:text-xl font-semibold text-gray-800 text-center"
+          >
             Koromaru
           </h3>
-          <p class="mt-2 text-sm text-gray-500 text-center">
+          <p class="mt-2 text-sm md:text-base text-gray-500 text-center">
             A loyal dog who can summon a Persona and fights for SEES.
           </p>
         </div>
@@ -393,11 +450,11 @@
 
     <!-- Message Us -->
     <section
-      class="py-12 px-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white"
+      class="py-12 px-4 sm:px-6 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white"
       id="message"
     >
       <h2 class="text-3xl font-bold mb-8 text-center">Message Us</h2>
-      <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
         <!-- Form -->
         <form class="space-y-5 bg-gray-800 p-6 rounded-2xl shadow-lg">
           <div>
