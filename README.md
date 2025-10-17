@@ -1,7 +1,7 @@
 # 🌐 Persona Fansite Website
 
 Website sederhana bertema **Persona Fansite** yang dibuat sebagai latihan penggunaan **HTML**, **Tailwind CSS**, dan **JavaScript**.  
-Project ini menampilkan beberapa section interaktif seperti **Hero**, **Profile**, **Characters**, dan **Message Us**, lengkap dengan **formulir input-output** serta **modal input nama** saat pertama kali membuka website.
+Project ini menampilkan beberapa section seperti **Hero**, **Profile**, **Characters**, dan **Message Us**, lengkap dengan **formulir input-output** serta **modal input nama** saat pertama kali membuka website.
 
 ---
 
